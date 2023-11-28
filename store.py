@@ -9,7 +9,8 @@ def hello():
     Returns:
         A string with the words 'Hello World!'.
     """
-    return main_menu()
+    cc=main_menu()
+    return cc
 
 
 
