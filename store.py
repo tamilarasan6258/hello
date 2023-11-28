@@ -1,16 +1,6 @@
 from flask import Flask
 
-app = Flask(__name__)
 
-@app.route("/")
-def hello():
-    """Return a friendly HTTP greeting.
-
-    Returns:
-        A string with the words 'Hello World!'.
-    """
-    cc=main_menu()
-    return cc
 
 
 
@@ -18,6 +8,7 @@ def hello():
 
 # A class to represent a product
 class Product:
+    
     # A constructor to initialize the product attributes
     def __init__(self, id, name, price, stock):
         self.id = id # A unique identifier for the product
@@ -26,6 +17,11 @@ class Product:
         self.stock = stock # The number of units available in the store
 
     # A method to display the product details
+    app = Flask(__name__)
+    @app.route("/")
+    def hello():
+        cc=main_menu()
+        return cc
     def show(self):
         print(f"ID: {self.id}, Name: {self.name}, Price: {self.price}, Stock: {self.stock}")
 
